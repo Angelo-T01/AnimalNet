@@ -1,0 +1,352 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section class="section">
+<div class="columns is-vcentered is-widescreen content is-medium">
+  <div class="column is-half-tablet is-full-mobile ">
+    <h1 class="title is-1 has-text-primary has-text-weight-bold">Animal Net</h1>
+    <p class="has-text-primary-20">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+    </p>
+    {% if user.is_authenticated %}
+      <a class="button is-primary" href="/analisis">
+        <strong>Analizar</strong>
+      </a>
+    {% else %}
+      <a href="/signup" class="button is-link">Comenzar</a>
+    {% endif %}
+  </div>
+  <div class="column is-half-tablet is-full-mobile is-full-mobile c">
+    {% load static %}
+          <img src="{% static 'jaguar.png' %}" alt="Mi imagen" alt="Imagen de fondo" style="width: 100%;">
+         
+</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="columns is-vcentered">
+    <div class="content is-medium">
+      <h1 class="has-text-link">Que ofrecemos</h1>
+      <p class="has-text-primary-20">
+        Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius
+        lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat
+        odio, sollicitudin vel erat vel, interdum mattis neque.
+        works as well!
+      </p>
+    </div>
+   </div>
+ </section>
+ <!--CARDS -->
+
+
+ <section class="section is-half">
+  <div class="columns is-mobile is-multiline">
+    <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+      <!--CARD DE MAPEO DE ESTACIONES-->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-square">
+            {% load static %}
+            <img src="{% static 'arbol.jpeg' %}" alt="Mapeo">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h4 class="title is-4 has-text-link">Mapeo de cámaras</h4>
+            </div>
+          </div>
+          <div class="content">
+            <p class="has-text-primary-20">Descripción del análisis</p>
+            <a href="/caracteristicas/" class="button is-link is-fullwidth">Más información</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+      <!-- CARD CO-OCURRENCIA DE HABITAt -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-1by1">
+            <img src="{% static 'animalnet.jpeg' %}" alt="Co-ocurrencia de hábitat">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h4 class="title is-4 has-text-link">Co-ocurrencia espacio temporal</h4>
+            </div>
+          </div>
+          <div class="content">
+            <p class="has-text-primary-20">Descripción del análisis</p>
+            <a href="/caracteristicas/" class="button is-link is-fullwidth">Más información</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+      <!-- #CARD DE ANALISIS DE RED -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-1by1">
+            {% load static %}
+            <img src="{% static 'red.jpeg' %}" alt="Analisis de red">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h4 class="title is-4 has-text-link">Análisis de red</h4>
+            </div>
+          </div>
+          <div class="content">
+            <p class="has-text-primary-20">Descripción del análisis</p>
+            <a href="/caracteristicas/" class="button is-link is-fullwidth">Más información</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+      <!-- CARD DE TRASLAPE TEMPORAL -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-1by1">
+            {% load static %}
+            <img src="{% static 'grafica.jpeg' %}" alt="Mi imagen">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h4 class="title is-4 has-text-link">Traslape temporal</h4>
+            </div>
+          </div>
+          <div class="content">
+            <p class="has-text-primary-20">Descripción del análisis traslape</p>
+            <a href="/caracteristicas/" class="button is-link is-fullwidth">Más información</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Cards-->
+
+ <section class="section">
+  <div class="columns is-vcentered">
+     <div class="column is-6">
+        {% load static %}
+        <img src="{% static 'pc.jpeg' %}" alt="Mi imagen" width="85%">
+     </div>
+     <div class="column is-6 content is-medium ">
+        <h3 class="has-text-link">Cómo funciona</h3>
+        <p class="has-text-primary-20">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan,
+           metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo
+           nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel
+           erat vel, interdum mattis neque.
+        </p>
+        <a href="/guia/" class="button is-link">Leer Guía</a>
+        <a href="/dicc/" class="button is-primary">Tipos de Datos</a>
+     </div>
+     
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="columns is-vcentered">
+    <div class="column is-6 content is-medium">
+       <h3 class="has-text-link">Referencias</h3>
+       <p class="has-text-primary-20">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan,
+         metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo
+         nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel
+         erat vel, interdum mattis neque.
+       </p>
+       
+     </div>
+     <div class="column is-6"">
+       {% load static %}
+       <img src="{% static 'jaguarDoc.jpeg' %}" alt="Mi imagen" alt="Mi imagen" width="80%">
+     </div>
+   </div>
+</section>
+<section class="section">
+<div class="fixed-grid has-3-cols-desktop has-2-cols-tablet has-1-cols-mobile">
+  <h3 class="title is-3 has-text-link"> Artículos </h3>
+    <div class="grid">
+        <div class="cell">
+            <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://bulma.io/assets/images/placeholders/96x96.png"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">John Smith</p>
+                    </div>
+                  </div>
+              
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                    iaculis mauris.
+                    <br />
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="cell">
+          <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img
+                        src="https://bulma.io/assets/images/placeholders/96x96.png"
+                        alt="Placeholder image"
+                      />
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4">John Smith</p>
+                  </div>
+                </div>
+            
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                  iaculis mauris.
+                  <br />
+                </div>
+              </div>
+            </div>
+      </div>
+      
+      <div class="cell">
+        <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/assets/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">John Smith</p>
+                </div>
+              </div>
+          
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                iaculis mauris.
+                <br />
+              </div>
+            </div>
+          </div>
+    </div> <div class="cell">
+      <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img
+                    src="https://bulma.io/assets/images/placeholders/96x96.png"
+                    alt="Placeholder image"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">John Smith</p>
+              </div>
+            </div>
+        
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+              iaculis mauris.
+              <br />
+            </div>
+          </div>
+        </div>
+  </div> <div class="cell">
+    <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  src="https://bulma.io/assets/images/placeholders/96x96.png"
+                  alt="Placeholder image"
+                />
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">John Smith</p>
+            </div>
+          </div>
+      
+          <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+            iaculis mauris.
+            <br />
+          </div>
+        </div>
+      </div>
+</div> <div class="cell">
+  <div class="card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img
+                src="https://bulma.io/assets/images/placeholders/96x96.png"
+                alt="Placeholder image"
+              />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">John Smith</p>
+          </div>
+        </div>
+    
+        <div class="content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+          iaculis mauris.
+          <br />
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+</div>
+</section>
+
+<section  class="section">
+<h3 class="title is-3 has-text-link">
+  Como citar
+</h3>
+<div class="box">
+  <p class="has-text-centered has-text-primary-20">
+    la cita correspondiente a los trabajos hechos con;
+  </p> 
+</div>
+</section>
+
+
+{% endblock %}

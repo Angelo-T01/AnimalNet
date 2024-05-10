@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="section is-half">
+  <div class="columns is-mobile is-multiline">
+    <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+      <!--CARD DE MAPEO DE ESTACIONES-->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-square">
+            {% load static %}
+            <img src="{% static 'arbol.jpeg' %}" alt="Mapeo">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h2 class="title is-3 has-text-primary">Mapeo de cámaras</h2>
+            </div>
+          </div>
+          <div class="content">
+            <p class="has-text-primary-20">Descripción del análisis</p>
+          </div>
+          <div class="card-footer">
+     
+            <a href="/analisis/archivo/" class="button is-link is-fullwidth">Iniciar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+      <!-- CARD CO-OCURRENCIA DE HABITAt -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-1by1">
+            <img src="{% static 'animalnet.jpeg' %}" alt="Co-ocurrencia de hábitat">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h2 class="title is-3 has-text-primary">Co-ocurrencia espacio temporal</h2>
+            </div>
+          </div>
+          <div class="content">
+            <p class="has-text-primary-20">Descripción del análisis</p>
+          </div>
+          <div class="card-footer">
+            <a href="/analisis/espaciotemp/" class="button is-link is-fullwidth">Iniciar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+      <!-- #CARD DE ANALISIS DE RED -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-1by1">
+            {% load static %}
+            <img src="{% static 'red.jpeg' %}" alt="Análisis de red">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h2 class="title is-3 has-text-primary">analisis de red</h2>
+            </div>
+          </div>
+          <div class="content">
+            <p class="has-text-primary-20">Descripción del análisis</p>
+          </div>
+          <div class="card-footer">
+            <button href="#" class="button is-link is-fullwidth">Iniciar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+      <!-- CARD DE TRASLAPE TEMPORAL -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-1by1">
+            {% load static %}
+            <img src="{% static 'grafica.jpeg' %}" alt="Mi imagen">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h2 class="title is-3 has-text-primary">Mapeo de cámaras</h2>
+            </div>
+          </div>
+          <div class="content">
+            <p class="has-text-primary-20">Descripción del análisis de mapeo</p>
+          </div>
+          <div class="card-footer">
+            <button href="#" class="button is-link is-fullwidth">Iniciar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

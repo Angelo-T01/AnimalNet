@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="section is-medium">
+
+<div class="columns is-mobile is-half">
+    <div class="column is-three-fifths is-offset-one-fifth ">
+      
+       
+    <form action="/signin/" method="POST" class="box">  
+         {% if error %}
+        <div class="notification is-danger">
+          {{ error }}
+        </div>
+      {% endif %}
+      
+      {% csrf_token %}
+      <h3 class="title is-3 has-text-centered has-text-link"> Login</h3>
+        <div class="field">
+            <label class="label">Username:</label>
+            <div class="control">
+              <input class="input" type="text" name="username" id="username" placeholder="Usuario01" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Contraseña</label>
+            <div class="control">
+              <input class="input" type="password" name="password" id="password"  placeholder="********" />
+            </div>
+          </div>
+        <button class="button is-primary is-fullwidth">Sign in</button>
+    </form>
+    </div>
+  </div>
+  
+</section>
+  {% endblock %}

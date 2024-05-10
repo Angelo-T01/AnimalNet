@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- 
+<h1>Validación de archivo Excel</h1>
+<section class="section">
+  
+<form method="POST" action="/analisis/archivo/">
+{% if success %}
+<a href="/analisis/archivo/" class="button">
+  next
+</a>
+<div class="notification is-success">
+  {{ success }}
+</div>
+
+{% endif %}
+
+{% csrf_token %}
+            
+{{form}}  
+<button class="button is-danger">
+save
+</button>
+</form>
+
+</div> -->
+
+<h1>
+  {{proyecto.NombreProyecto}}
+</h1>
+
+</section>
+
+{% endblock %}

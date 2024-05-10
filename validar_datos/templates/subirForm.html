@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="section">
+    <h1 class="title is-3 has-text-link"> Subir form</h1>
+
+    <div class="box">
+        <form action="/analisis/form/" method="POST">
+            {% if error %}
+            <div class="notification is-danger">
+              {{ error }}
+            </div>
+          {% endif %}
+          {% if success %}
+        <div class="notification is-success">
+            {{ success }}
+        </div>
+    {% endif %}
+          
+            {% csrf_token %}
+            
+            {{form}}  
+    <button class="button is-danger">
+        save
+    </button>
+        </form>
+         
+    </div>
+    
+</section>
+
+{% endblock %}
